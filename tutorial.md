@@ -185,6 +185,7 @@ Det borde också se ut så hära i hela python_car directory
 ````markdown
 └── python_car
     ├── main.py
+    │
     ├── templates
     │   └── index.html
     └── static
