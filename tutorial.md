@@ -40,8 +40,7 @@ Det hära är en tutorial på hur man gör en bil med hjälp av en raspberry, en
 
 *• GPIO 21 -->	ENA (Höger sidan)*
 
-
-# bild bild bild 
+![125340423-bf39ed00-e352-11eb-948f-4bf9b415d004](https://user-images.githubusercontent.com/87243876/132830465-d5dc4d06-8474-4aba-a597-217ef733b4ec.png)
 
 ---
 
