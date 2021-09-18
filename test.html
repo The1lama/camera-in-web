@@ -1,0 +1,67 @@
+<!--
+   index.html
+   
+   -->
+   <html>
+    <head>
+       <title>Live Streaming</title>
+       <link rel="stylesheet" href='../static/style.css'/>
+    </head>
+    <body>
+       <h1 style="text-align: left;">Car Live Streaming</h1>
+       <h3><img src="{{ url_for('video_feed') }}" width="50%"></h3>
+       <h3>
+          <button>
+          <a href="/video_feed" style="color: black;"> </a>
+          </button>
+       </h3>
+       <h1 align="Right"; style="color: goldenrod;">Motorer</h1>
+       <!--start and turn off motors-->
+       <h2 align="Right"; style="color: black"> start and off
+          <button>
+          <a href="/pin4/start" style="color:black"> start</a>
+          </button>
+          <button>
+          <a href="/pin4/off" style="color:black"> off</a>
+          </button>
+          <span style="float: left;">
+            <button>
+                <a href="/pin7/sr" style="color:black"> test</a>
+            </button>
+          </span>
+       </h2>
+       <h2 align="Right"; style="color: black"> Power
+          <button>
+          <a href="/pin4/start" style="color:black"> low</a>
+          </button>
+          <button>
+          <a href="/pin4/off" style="color:black"> medium</a>
+          </button>
+          <button>
+          <a href="/pin4/start" style="color:black"> high</a>
+          </button>
+       </h2>
+       <h2 align="Right"; style="color: black"> Stering
+          <button>
+          <a href="/pin7/sl" style="color:black"> Left</a>
+          </button>
+          <button>
+          <a href="/pin7/sr" style="color:black"> Right</a>
+          </button>
+       </h2>
+       <h2 align="Right"; style="color: black"> Stering 1 second
+          <button>
+          <a href="/pin7/sl" style="color:black"> Left</a>
+          </button>
+          <button>
+          <a href="/pin7/sr" style="color:black"> Right</a>
+          </button>
+       </h2>
+       <hr>
+       <p> @2021 Developed by Rasmus</p>
+    </body>
+ </html>
+ <p>links:</p>
+ <p> https://github.com/EbenKouao/SmartCCTV-Camera</p>
+ <p>https://github.com/Mjrovai/Video-Streaming-with-Flask</p>
+ <p> https://github.com/The1lama/python-car-L298N-motor-driver-with-web-controller</p>
