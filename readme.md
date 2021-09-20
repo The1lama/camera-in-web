@@ -444,7 +444,7 @@ When you have finished making all of the files it should look like this
 And now every thing would work with the car, the webside and the camera feed.
 
 ---
-* ## **Beskrivning av koderna**
+* ## **description of the files**
 
 * ### **main.py**
 This bit of code is just to import all the pakages.
@@ -534,8 +534,6 @@ def starting():
     return render_template("index.html")
 ````
 Last part of the code is the webadress and the port, debug and threaded. *Sometimes you will have to change the port if you have turned off the program and turnd on a couple of times.*
-
-Till sist så kommer den sista delen av koden som är tillför att få addresen till websidan och göra en port, sätta på debug och threaded. *Ibland så kan man behöva byta sin port om man har stänkt av pogramet och sutit på den ett antal gånger*
 ````python
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port =80, debug=True, threaded=True)
@@ -543,23 +541,22 @@ if __name__ == '__main__':
 
 * **index.html**
 
-Nu kommer de grundläggade från HTML-filen
+Now comes the basics for the HTML-file
 
+This check the styling for the webside `style.css` like where the buttons should be and the video feed.
 ```html
   <head>
     <title>Live Streaming</title>
     <link rel="stylesheet" href='../static/style.css'/>
   </head>
 ```
-Hära så kollar den på `style.css` filen inne i static mappen, för hur websidan ska se ut. 
-
+This is the place for the video feed and it has 50% of its width.
 ```html
    <h3>
        <img src="{{ url_for('video_feed') }}" width="50%">
    </h3>
 ```
-Hära så kommer man att få in video bilden till websidan med 50% av sin bredd.
-
+This is just an example of how to create two diffrent buttons and how it changes the URL from example `xxx.xxx.xx.xxx/` to `xxx.xxx.xx.xxx/pin4/start` to start the motors, and then in the python code the `@app.route` sees that it has changes and starts that part of the code.
 ```html
          <h2 align="Right"; style="color: black"> start and off
               <button>
@@ -570,9 +567,10 @@ Hära så kommer man att få in video bilden till websidan med 50% av sin bredd.
               </button>
          </h2>
 ```
-Här skapar vi två styckna knappar som har chansen att ändra webadressen från exemel `xxx.xxx.xx.xxx/` till `xxx.xxx.xx.xxx/pin4/start`. Sen i python koden så kommer `@app.route` att se den har ändrats tilll `pin4/start` och kommer att sätta på motorerna för att gå framåt.
 
 * **style.css**
+
+This changes the colur of the background for example `background: blue` to `background: pink`, or if you want to chage th etext alignent on the webside.
 ```CSS
 body {
     background: blue;
@@ -594,23 +592,18 @@ body {
   }
   
 ```
-Den hära koden ändrar hur bakrounden ändrar färg om du skulle byta ut exempel `background: blue` till `background: pink`, eller hur man vill align texten med ``text-align: center;``.
-
+`.left` is lokking after a `class left` in the html code så it can put the class to the left of the webside.
 ```css
   .left {
     float: left;
   }
 ```
-`.left` i css koden letar efter `class` left i html koden så att man kan lägga det stycket till vänster, vilket i deta fall är video bilden på webbsidan.
-
-````html
-    <img class="left" src="{{ url_for('video_feed') }}" width="50%">
-````
 
 * **camera_pi**
 
-Här kommer den del av koden som man kan ändra och fixa med.
+This part of the code you can change the camera of the resolution or if you vant to filp the camera. `hflip` changes the horizontal filp, `vflip` changes the vertical flip so if you would have the camera upside down you can change the organtation for the camera feed, without physicaly moving the camera. 
 
+For the `camera.resolution` you can chagne the resolution of the camera if you want to have a better image.
 ```python
     def _thread(cls):
         with picamera.PiCamera() as camera:
@@ -618,7 +611,4 @@ Här kommer den del av koden som man kan ändra och fixa med.
             camera.resolution = (320, 240)
             camera.hflip = True
             camera.vflip = True
-```
-Vid `camera.resolution` så kan man ändra kamerans resolution. 
-
-Vid `camera.hfilp` och `camera.vflip` så kan man ändra hur kameran ska orgentera sig.`hflip` ändrar hur orgenteringen på videon är horizonelt och `vflip` ändrar hur den kommer att vara vertikalt. 
+``` 
