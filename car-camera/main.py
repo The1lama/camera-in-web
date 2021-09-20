@@ -12,11 +12,6 @@ GPIO.setmode(GPIO.BCM)
 
 
 """   <setup>   """
-#setting variables for GPIO pins 17, 27, 10
-led1 = 17
-led2 = 27
-led3 = 10
-
 #set each led as an output:
 GPIO.setup(led1, GPIO.OUT)
 GPIO.setup(led2, GPIO.OUT)
