@@ -10,12 +10,7 @@ app = Flask(__name__)
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
-
 """   <setup>   """
-#set each led as an output:
-GPIO.setup(led1, GPIO.OUT)
-GPIO.setup(led2, GPIO.OUT)
-GPIO.setup(led3, GPIO.OUT)
 #setup pins variable for left motor:
 in1 = 24
 in2 = 23
