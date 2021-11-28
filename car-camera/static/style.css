@@ -1,19 +1,12 @@
 body {
-    background: blue;
-    color: yellow;
-    padding: 1%;
-    text-align: center;
-  }
-  
-  .right {
-    float: right;
-  }
-  
-  .left {
-    float: left;
-  }
-  
-  footer {
-    float: left;
-  }
-  
+     background: skyblue;
+     color: goldenrod;
+     padding: 1%;
+     text-align: center;
+}
+ .right {
+     float: right;
+}
+ .left {
+     float: left;
+}
